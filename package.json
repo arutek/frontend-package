@@ -1,0 +1,12 @@
+{
+  "name": "arutek-core-app",
+  "private": true,
+  "version": "0.0.1",
+  "description": "All core component for Arutek",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "novando",
+  "license": "ISC"
+}
