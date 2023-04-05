@@ -22,7 +22,10 @@ importers:
 
   apps/bucket-explorer:
     dependencies:
-      '@arutek/packages-styles':
+      '@arutek/package-components':
+        specifier: workspace:*
+        version: link:../../packages/components
+      '@arutek/package-styles':
         specifier: workspace:*
         version: link:../../packages/styles
       react:
@@ -47,6 +50,44 @@ importers:
       vite:
         specifier: ^4.2.0
         version: 4.2.1
+
+  packages/components:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@types/react':
+        specifier: ^18.0.28
+        version: 18.0.33
+      '@types/react-dom':
+        specifier: ^18.0.11
+        version: 18.0.11
+      typescript:
+        specifier: ^4.9.3
+        version: 4.9.5
+
+  packages/components2:
+    dependencies:
+      '@arutek/package-styles':
+        specifier: workspace:*
+        version: link:../styles
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@types/react':
+        specifier: ^18.0.28
+        version: 18.0.33
+      '@types/react-dom':
+        specifier: ^18.0.11
+        version: 18.0.11
 
   packages/styles:
     devDependencies:

@@ -1,7 +1,9 @@
 {
-  "name": "@arutek/packages-styles",
+  "name": "@arutek/package-styles",
+  "private": true,
   "version": "0.0.1",
   "description": "All styling for Arutek application went here",
+  "main": "./index.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

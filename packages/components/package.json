@@ -1,0 +1,26 @@
+{
+  "name": "@arutek/package-components",
+  "private": true,
+  "version": "0.0.1",
+  "description": "All UI component for Arutek application went here",
+  "main": "./index.ts",
+  "contributors": [
+    {
+      "name": "Rizky Novando Priyadi",
+      "email": "rizkynovando@gmail.com",
+      "url": "https://gitlab.com/novando"
+    }
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "typescript": "^4.9.3"
+  }
+}
