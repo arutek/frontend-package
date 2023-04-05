@@ -1,0 +1,15 @@
+module.exports = {
+  '2xs': '8px',
+  'xs': '10px',
+  'sm': '12px',
+  'base': '14px',
+  'lg': '16px',
+  'xl': '20px',
+  '2xl': '24px',
+  '3xl': '28px',
+  '4xl': '36px',
+  '5xl': '48px',
+  '6xl': '60px',
+  '8xl': '240px',
+  '9xl': '480px',
+}
