@@ -1,8 +1,8 @@
-const colors = require('./tailwind/default/colors.cjs')
-const spacing = require('./tailwind/default/spacing.cjs')
-const letterSpacing = require('./tailwind/default/letterSpacing.cjs')
-const minWidth = require('./tailwind/default/minWidth.cjs')
-const maxWidth = require('./tailwind/default/maxWidth.cjs')
+const colors = require(`./tailwind/${process.env.VITE_STYLE}/colors.cjs`)
+const spacing = require(`./tailwind/${process.env.VITE_STYLE}/spacing.cjs`)
+const letterSpacing = require(`./tailwind/${process.env.VITE_STYLE}/letterSpacing.cjs`)
+const minWidth = require(`./tailwind/${process.env.VITE_STYLE}/minWidth.cjs`)
+const maxWidth = require(`./tailwind/${process.env.VITE_STYLE}/maxWidth.cjs`)
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
