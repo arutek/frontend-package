@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.1",
   "description": "All UI component for Arutek application went here",
-  "main": "./index.ts",
   "contributors": [
     {
       "name": "Rizky Novando Priyadi",
