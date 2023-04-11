@@ -15,7 +15,7 @@ interface propsType {
   setter: setterType,
 }
 
-const Button = (props:propsType) => {
+const RegisterForm = (props:propsType) => {
   const emailInputted = (e:ChangeEvent<HTMLInputElement>) => {
     props.setter.setEmail(e.target.value)
   }
@@ -55,4 +55,4 @@ const Button = (props:propsType) => {
   )
 }
 
-export default Button
+export default RegisterForm
