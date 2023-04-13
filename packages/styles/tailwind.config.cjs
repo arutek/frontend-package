@@ -1,14 +1,17 @@
-const colors = require(`./tailwind/${process.env.VITE_STYLE}/colors.cjs`)
-const spacing = require(`./tailwind/${process.env.VITE_STYLE}/spacing.cjs`)
-const letterSpacing = require(`./tailwind/${process.env.VITE_STYLE}/letterSpacing.cjs`)
-const minWidth = require(`./tailwind/${process.env.VITE_STYLE}/minWidth.cjs`)
-const maxWidth = require(`./tailwind/${process.env.VITE_STYLE}/maxWidth.cjs`)
+require('dotenv').config()
+const styleName = process.env.VITE_STYLE || process.env.STYLE || 'default'
+const colors = require(`./tailwind/${styleName}/colors.cjs`)
+const spacing = require(`./tailwind/${styleName}/spacing.cjs`)
+const letterSpacing = require(`./tailwind/${styleName}/letterSpacing.cjs`)
+const minWidth = require(`./tailwind/${styleName}/minWidth.cjs`)
+const maxWidth = require(`./tailwind/${styleName}/maxWidth.cjs`)
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     '**/*/index.html',
     './src/**/*.{js,jsx,md,mdx,ts,tsx}',
+    './tabs/**/*.{js,ts,jsx,tsx}',
   ],
   safelist: [
     {

@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "description": "All core component for Arutek",
   "scripts": {
-    "dev:bucket-explorer": "pnpm --filter @arutek/app-bucket-explorer... -recursive --parallel --stream dev"
+    "dev:bucket-explorer": "pnpm --filter @arutek/app-bucket-explorer... -recursive --parallel --stream dev",
+    "dev:partner-sip-aja": "pnpm --filter @arutek/app-partner-sip-aja... -recursive --stream dev:partner-sip-aja"
   },
   "keywords": [],
   "contributors": [

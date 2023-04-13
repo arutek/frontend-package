@@ -6,6 +6,11 @@
   "main": "./index.scss",
   "type": "module",
   "scripts": {
+    "dev": "pnpx tailwindcss -i ./index.scss -o ./dist/tailwind.scss && pnpm compile",
+    "dev:partner-sip-aja": "cp .env.sip-aja .env && pnpx tailwindcss -i ./index.scss -o ./dist/tailwind.scss && pnpm compile && rm .env",
+    "build": "pnpx tailwindcss -i ./index.scss -o ./dist/tailwind.scss && pnpm compile",
+    "build:partner-sip-aja": "cp .env.sip-aja .env && pnpx tailwindcss -i ./index.scss -o ./dist/tailwind.scss && pnpm compile && rm .env",
+    "compile": "sass ./dist/tailwind.scss ./dist/tailwind.css --style compressed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,7 +25,11 @@
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
+    "postcss-import": "^15.1.0",
     "sass": "^1.60.0",
     "tailwindcss": "^3.3.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
   }
 }
