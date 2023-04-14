@@ -24,6 +24,7 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "semi": ["error", "never"],
     "indent": ["error", 2],
-    "@typescript-eslint/no-var-requires": "off"
+    "@typescript-eslint/no-var-requires": "off",
+    "no-useless-escape": ["off"]
   }
 }

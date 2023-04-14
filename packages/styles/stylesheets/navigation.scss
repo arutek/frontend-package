@@ -1,0 +1,5 @@
+@layer components {
+  .nav-link {
+    @apply text-black hover:text-light-black;
+  }
+}

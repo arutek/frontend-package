@@ -2,8 +2,13 @@
   .btn {
     @apply py-8 px-16;
     &-primary {
-      @extend .btn;
       @apply bg-primary text-contrast-primary accent-contrast-primary rounded hover:bg-light-primary;
+    }
+    &-success {
+      @apply bg-success text-contrast-success accent-contrast-success rounded hover:bg-light-success;
+    }
+    &-danger {
+      @apply bg-danger text-contrast-danger accent-contrast-danger rounded hover:bg-light-danger;
     }
   }
 }
