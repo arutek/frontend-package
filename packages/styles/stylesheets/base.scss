@@ -1,4 +1,4 @@
 @layer base {
-  body {@apply text-base font-sans}
+  body {@apply text-base font-sans bg-background}
   a {@apply text-primary}
 }
