@@ -1,0 +1,24 @@
+{
+  "name": "@arutek/package-libraries",
+  "private": true,
+  "version": "0.0.1",
+  "description": "All libraries used in Arutek application went here",
+  "contributors": [
+    {
+      "name": "Rizky Novando Priyadi",
+      "email": "rizkynovando@gmail.com",
+      "url": "https://gitlab.com/novando"
+    }
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@arutek/package-helpers": "workspace:*",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.11",
+    "typescript": "^4.9.3"
+  }
+}
