@@ -5,4 +5,10 @@
   .typ-header-regular-normal {
     @apply text-base;
   }
+  .typ-title-regular-bold {
+    @apply text-4xl font-bold;
+  }
+  .typ-title-small-medium {
+    @apply text-xl font-medium;
+  }
 }
