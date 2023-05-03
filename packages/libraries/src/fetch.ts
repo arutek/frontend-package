@@ -14,8 +14,8 @@ export default {
         'Content-Type': 'application/json',
       }, headers),
     })
-    if (res.status < 200 && res.status >= 400) {
-      throw res.statusText
+    if (res.status !== 200) {
+      throw res.json()
     }
     const resJson = await res.json()
     return resJson
@@ -32,7 +32,7 @@ export default {
       }, headers),
       body: JSON.stringify(payload),
     })
-    if (res.status < 200 && res.status >= 400) {
+    if (res.status !== 200) {
       throw res.statusText
     }
     const resJson = await res.json()
@@ -50,7 +50,7 @@ export default {
       }, headers),
       body: JSON.stringify(payload),
     })
-    if (res.status < 200 && res.status >= 400) {
+    if (res.status !== 200) {
       throw res.statusText
     }
     const resJson = await res.json()
@@ -67,7 +67,7 @@ export default {
         'Content-Type': 'application/json',
       }, headers),
     })
-    if (res.status < 200 && res.status >= 400) {
+    if (res.status !== 200) {
       throw res.statusText
     }
     const resJson = await res.json()
@@ -84,7 +84,7 @@ export default {
         'Content-Type': 'application/json',
       }, headers),
     })
-    if (res.status < 200 && res.status >= 400) {
+    if (res.status !== 200) {
       throw res.statusText
     }
     const resBlob = await res.blob()
@@ -109,7 +109,7 @@ export default {
         'Content-Type': 'multipart/form-data',
       }, headers),
     })
-    if (res.status < 200 && res.status >= 400) {
+    if (res.status !== 200) {
       throw res.statusText
     }
     const resJson = await res.json()
