@@ -4,6 +4,7 @@ let intervalId:number
 
 const notifyHide = () => {
   clearInterval(intervalId)
+  //@ts-ignore
   intervalId = setInterval(() => notification$.next({type: '', msg: ''}), 2500)
 }
 

@@ -10,16 +10,16 @@ const enableLog = envLogger === 'true'
 
 export class MeLogger {
   pre = ''
-  constructor (op) {
+  constructor (op:any) {
     this.pre = op
   }
-  log (...args) {
+  log (...args:any[]) {
     if (!enableLog) return false
     const preCss = 'font-weight: bold; padding: 4px 8px; color: white; background-color: black'
     Array.prototype.unshift.call(args, `%c[${this.pre}]:\n`, preCss)
     console.log.apply(this, args)
   }
-  error (...args) {
+  error (...args:any[]) {
     if (!enableLog) return false
     const preCss = 'font-weight: bold; padding: 4px 8px; color: white; background-color: red'
     Array.prototype.unshift.call(args, `%c[${this.pre}]:\n`, preCss)

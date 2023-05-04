@@ -6,7 +6,9 @@
   "scripts": {
     "dev:bucket-explorer": "pnpm --filter @arutek/apps-bucket-explorer... -recursive --parallel --stream dev",
     "dev:partner-sip-aja": "pnpm --filter @arutek/apps-partner-sip-aja... -recursive --stream dev:partner-sip-aja",
-    "dev:partner-sip-aja-dash": "pnpm --filter @arutek/apps-partner-sip-aja-dash... -recursive --parallel --stream dev"
+    "build:partner-sip-aja": "pnpm --filter @arutek/apps-partner-sip-aja... -recursive build:partner-sip-aja",
+    "dev:partner-sip-aja-dash": "pnpm --filter @arutek/apps-partner-sip-aja-dash... -recursive --parallel --stream dev",
+    "build:partner-sip-aja-dash": "pnpm --filter @arutek/apps-partner-sip-aja-dash... -recursive --parallel build"
   },
   "keywords": [],
   "contributors": [
