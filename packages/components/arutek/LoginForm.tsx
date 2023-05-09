@@ -1,11 +1,11 @@
 import { ChangeEvent } from 'react'
 
 interface getterType {
-  email: string,
+  credential: string,
   password: string,
 }
 interface setterType {
-  setEmail: React.Dispatch<React.SetStateAction<string>>,
+  setCredential: React.Dispatch<React.SetStateAction<string>>,
   setPassword: React.Dispatch<React.SetStateAction<string>>,
 }
 interface propsType {
@@ -14,8 +14,8 @@ interface propsType {
 }
 
 const LoginForm = (props:propsType) => {
-  const emailInputted = (e:ChangeEvent<HTMLInputElement>) => {
-    props.setter.setEmail(e.target.value)
+  const credentialInputted = (e:ChangeEvent<HTMLInputElement>) => {
+    props.setter.setCredential(e.target.value)
   }
   const passwordInputted = (e:ChangeEvent<HTMLInputElement>) => {
     props.setter.setPassword(e.target.value)
@@ -23,17 +23,18 @@ const LoginForm = (props:propsType) => {
   return (
     <section className="flex flex-col gap-24">
       <label className="flex flex-col gap-8">
-        <p>Email</p>
+        <p>Credential</p>
         <input
           type="text"
+          placeholder="Email or Username"
           className="input"
-          value={props.getter.email}
-          onChange={emailInputted} />
+          value={props.getter.credential}
+          onChange={credentialInputted} />
       </label>
       <label className="flex flex-col gap-8">
         <p>Password</p>
         <input
-          type="text"
+          type="password"
           className="input"
           value={props.getter.password}
           onChange={passwordInputted} />

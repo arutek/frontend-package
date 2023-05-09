@@ -15,8 +15,9 @@
   },
   "dependencies": {
     "@arutek/package-helpers": "workspace:*",
-    "dayjs": "^1.11.7",
-    "dotenv": "^16.0.3"
+    "date-fns": "^2.30.0",
+    "dotenv": "^16.0.3",
+    "react-router-dom": "^6.11.1"
   },
   "devDependencies": {
     "@types/node": "18.15.11",

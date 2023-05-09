@@ -28,7 +28,7 @@ const NotificationToast = () => {
   }, [])
 
   return (
-    <section className={mainClass}>
+    <section className={`${mainClass} text-sm w-300`}>
       <div className="px-16 py-8">{msg}</div>
     </section>
   )
