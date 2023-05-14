@@ -10,15 +10,12 @@ export default {
     }
     const res = await fetch(url, {
       method: 'GET',
-      headers: Object.assign({
-        'Content-Type': 'application/json',
-      }, headers),
+      headers: headers,
     })
     if (res.status !== 200) {
-      throw res.json()
+      throw await res.json()
     }
-    const resJson = await res.json()
-    return resJson
+    return await res.json()
   },
   async postData (url:string, payload:object, query = {}) {
     if (query) {
@@ -27,16 +24,13 @@ export default {
     }
     const res = await fetch(url, {
       method: 'POST',
-      headers: Object.assign({
-        'Content-Type': 'application/json',
-      }, headers),
+      headers:  headers,
       body: JSON.stringify(payload),
     })
     if (res.status !== 200) {
-      throw res.statusText
+      throw await res.json()
     }
-    const resJson = await res.json()
-    return resJson
+    return await res.json()
   },
   async putData (url:string, payload:object, query = {}) {
     if (query) {
@@ -45,16 +39,13 @@ export default {
     }
     const res = await fetch(url, {
       method: 'PUT',
-      headers: Object.assign({
-        'Content-Type': 'application/json',
-      }, headers),
+      headers: headers,
       body: JSON.stringify(payload),
     })
     if (res.status !== 200) {
-      throw res.statusText
+      throw await res.json()
     }
-    const resJson = await res.json()
-    return resJson
+    return await res.json()
   },
   async delData (url:string, query = {}) {
     if (query) {
@@ -63,15 +54,12 @@ export default {
     }
     const res = await fetch(url, {
       method: 'DELETE',
-      headers: Object.assign({
-        'Content-Type': 'application/json',
-      }, headers),
+      headers: headers,
     })
     if (res.status !== 200) {
-      throw res.statusText
+      throw await res.json()
     }
-    const resJson = await res.json()
-    return resJson
+    return await res.json()
   },
   async dlData (url:string, filename:string, query = {}) {
     if (query) {
@@ -80,23 +68,12 @@ export default {
     }
     const res = await fetch(url, {
       method: 'GET',
-      headers: Object.assign({
-        'Content-Type': 'application/json',
-      }, headers),
+      headers: headers,
     })
     if (res.status !== 200) {
-      throw res.statusText
+      throw await res.json()
     }
-    const resBlob = await res.blob()
-    return resBlob
-  },
-  async getDataLogged (url:string, query = {}) {
-    const token = helpCookie.getAuthCookie()
-    helpCookie.setAuthCookie(token, 30)
-    headers = {
-      Authorization: `Bearer ${token}`,
-    }
-    return await this.getData(url, query)
+    return await res.blob()
   },
   async upData (url:string, formData:FormData, query = {}) {
     if (query) {
@@ -105,19 +82,25 @@ export default {
     }
     const res = await fetch(url, {
       method: 'POST',
-      headers: Object.assign({
-        'Content-Type': 'multipart/form-data',
-      }, headers),
+      headers: headers,
+      body: formData,
     })
     if (res.status !== 200) {
-      throw res.statusText
+      throw await res.json()
     }
-    const resJson = await res.json()
-    return resJson
+    return await res.json()
+  },
+  async getDataLogged (url:string, query = {}) {
+    const token = helpCookie.getAuthCookie()
+    // helpCookie.setAuthCookie(token, 30)
+    headers = {
+      Authorization: `Bearer ${token}`,
+    }
+    return await this.getData(url, query)
   },
   async postDataLogged (url:string, payload:object, query = {}) {
     const token = helpCookie.getAuthCookie()
-    helpCookie.setAuthCookie(token, 30)
+    // helpCookie.setAuthCookie(token, 30)
     headers = {
       Authorization: `Bearer ${token}`,
     }
@@ -125,7 +108,7 @@ export default {
   },
   async putDataLogged (url:string, payload:object, query = {}) {
     const token = helpCookie.getAuthCookie()
-    helpCookie.setAuthCookie(token, 30)
+    // helpCookie.setAuthCookie(token, 30)
     headers = {
       Authorization: `Bearer ${token}`,
     }
@@ -133,7 +116,7 @@ export default {
   },
   async delDataLogged (url:string, query = {}) {
     const token = helpCookie.getAuthCookie()
-    helpCookie.setAuthCookie(token, 30)
+    // helpCookie.setAuthCookie(token, 30)
     headers = {
       Authorization: `Bearer ${token}`,
     }
@@ -141,7 +124,7 @@ export default {
   },
   async dlDataLogged (url:string, filename:string, query = {}) {
     const token = helpCookie.getAuthCookie()
-    helpCookie.setAuthCookie(token, 30)
+    // helpCookie.setAuthCookie(token, 30)
     headers = {
       Authorization: `Bearer ${token}`,
     }
@@ -149,7 +132,7 @@ export default {
   },
   async upDataLogged (url:string, formData:FormData, query = {}) {
     const token = helpCookie.getAuthCookie()
-    helpCookie.setAuthCookie(token, 30)
+    // helpCookie.setAuthCookie(token, 30)
     headers = {
       Authorization: `Bearer ${token}`,
     }
