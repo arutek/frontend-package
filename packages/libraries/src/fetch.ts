@@ -61,7 +61,7 @@ export default {
     }
     return await res.json()
   },
-  async dlData (url:string, filename:string, query = {}) {
+  async dlData (url:string, filename = 'file', query = {}) {
     if (query) {
       const queryParam = new URLSearchParams(query)
       url += `?${queryParam.toString()}`
@@ -73,7 +73,21 @@ export default {
     if (res.status !== 200) {
       throw await res.json()
     }
-    return await res.blob()
+    const blob =  await res.blob()
+    const blobUrl = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    const contentDisposition = res.headers.get('Content-Disposition')
+    console.log('hasil: ', contentDisposition)
+    if (contentDisposition) {
+      const filenameMatch = contentDisposition.match(/filename=(.+)$/)
+      console.log(filenameMatch)
+      if (filenameMatch && filenameMatch.length > 1) filename = filenameMatch[1]
+    }
+    a.href = blobUrl
+    a.download = filename
+    a.style.display = 'none'
+    a.click()
+    return
   },
   async upData (url:string, formData:FormData, query = {}) {
     if (query) {
@@ -122,7 +136,7 @@ export default {
     }
     return await this.delData(url, query)
   },
-  async dlDataLogged (url:string, filename:string, query = {}) {
+  async dlDataLogged (url:string, filename?:string, query = {}) {
     const token = helpCookie.getAuthCookie()
     // helpCookie.setAuthCookie(token, 30)
     headers = {

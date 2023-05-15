@@ -7,7 +7,7 @@ const classDefiner = (val:string) => {
   case 'success':
     return `bg-primary text-white ${basicClass}`
   case 'warn':
-    return `bg-yellow-80 text-white ${basicClass}`
+    return `bg-yellow-80 text-black ${basicClass}`
   case 'err':
     return `bg-red-80 text-white ${basicClass}`
   default:

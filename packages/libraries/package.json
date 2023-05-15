@@ -16,6 +16,7 @@
   "dependencies": {
     "@arutek/package-helpers": "workspace:*",
     "date-fns": "^2.30.0",
+    "date-fns-tz": "^2.0.0",
     "dotenv": "^16.0.3",
     "react-router-dom": "^6.11.1"
   },

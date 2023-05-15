@@ -163,6 +163,9 @@ importers:
 
   packages/components:
     dependencies:
+      '@arutek/package-helpers':
+        specifier: workspace:*
+        version: link:../helpers
       '@arutek/package-stores':
         specifier: workspace:*
         version: link:../stores

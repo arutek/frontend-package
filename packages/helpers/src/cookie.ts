@@ -9,8 +9,8 @@ export default {
   },
   delCookie (key:string) {
     const cookies = document.cookie.split(';')
-    const selectedCookie = cookies.filter((row) => !row.includes(`${key}=`))
-    document.cookie = selectedCookie.join(';')
+    const selectedCookie = cookies.find((row) => row.includes(`${key}=`))
+    document.cookie = selectedCookie + ';expires=Thu, 01 Jan 1970 00:00:00 GMT'
   },
   setAuthCookie (value:string, minute:number) {
     document.cookie = `accessToken=${value}; max-age=${minute * 60}; samesite=lax; secure`
@@ -22,7 +22,7 @@ export default {
   },
   delAuthCookie () {
     const cookies = document.cookie.split(';')
-    const selectedCookie = cookies.filter((row) => !row.includes('accessToken='))
-    document.cookie = selectedCookie.join(';')
+    const selectedCookie = cookies.find((row) => row.includes('accessToken='))
+    document.cookie = selectedCookie + ';expires=Thu, 01 Jan 1970 00:00:00 GMT'
   },
 }
