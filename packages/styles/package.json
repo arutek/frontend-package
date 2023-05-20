@@ -6,9 +6,9 @@
   "main": "./index.scss",
   "type": "module",
   "scripts": {
-    "dev": "pnpx tailwindcss -i ./index.scss -o ./dist/tailwind.scss && pnpm compile",
+    "dev": "pnpx tailwindcss -i ./index.scss -o ./dist/tailwind.scss",
     "dev:partner-sip-aja": "cp .env.sip-aja .env && pnpx tailwindcss -i ./index.scss -o ./dist/tailwind.scss && pnpm compile && rm .env",
-    "build": "pnpx tailwindcss -i ./index.scss -o ./dist/tailwind.scss && pnpm compile",
+    "build": "pnpx tailwindcss -i ./index.scss -o ./dist/tailwind.scss",
     "build:partner-sip-aja": "cp .env.sip-aja .env && pnpx tailwindcss -i ./index.scss -o ./dist/tailwind.scss && pnpm compile && rm .env",
     "compile": "sass ./dist/tailwind.scss ./dist/tailwind.css --style compressed",
     "test": "echo \"Error: no test specified\" && exit 1"

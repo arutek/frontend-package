@@ -16,6 +16,7 @@
   "dependencies": {
     "@arutek/package-stores": "workspace:*",
     "@arutek/package-helpers": "workspace:*",
+    "@arutek/package-styles": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.1"

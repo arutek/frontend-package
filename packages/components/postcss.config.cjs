@@ -1,0 +1,1 @@
+module.exports = require('@arutek/package-styles/postcss.config.cjs')
