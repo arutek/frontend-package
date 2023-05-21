@@ -15,7 +15,8 @@ module.exports = {
   ],
   safelist: [
     {
-      pattern: /.*/
+      pattern: /.*/,
+      variants: ['group-hover']
     }
   ],
   theme: {

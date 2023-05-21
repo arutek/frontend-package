@@ -1,4 +1,4 @@
-import { ReactNode, useState, MouseEventHandler, ChangeEventHandler, ChangeEvent, Dispatch, SetStateAction } from 'react'
+import { ReactNode, MouseEventHandler, ChangeEventHandler } from 'react'
 
 interface propsType {
   headComponent: ReactNode,
@@ -11,7 +11,6 @@ interface propsType {
 }
 
 const DataTable = (props:propsType) => {
-  console.log(props.filter)
   return (
     <div className="w-full">
       <table className="w-full mb-20">

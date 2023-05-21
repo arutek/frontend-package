@@ -25,6 +25,8 @@ module.exports = {
     "semi": ["error", "never"],
     "indent": ["error", 2],
     "@typescript-eslint/no-var-requires": "off",
-    "no-useless-escape": ["off"]
+    "no-useless-escape": ["off"],
+    "no-unexpected-multiline": "warn",
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }
