@@ -4,8 +4,12 @@
   "version": "0.0.1",
   "description": "All core component for Arutek",
   "scripts": {
+    "dev:api-docs": "pnpm --filter @arutek/apps-api-docs... -recursive --stream dev",
+    "build:api-docs": "pnpm --filter @arutek/apps-api-docs... -recursive build",
     "dev:bucket-explorer": "pnpm --filter @arutek/apps-bucket-explorer... -recursive --parallel --stream dev",
     "dev:partner-sip-aja": "pnpm --filter @arutek/apps-partner-sip-aja... -recursive --stream dev:partner-sip-aja",
+    "dev:partner-arpi-dash": "pnpm --filter @arutek/apps-api-docs... -recursive --stream dev",
+    "build:partner-arpi-dash": "pnpm --filter @arutek/apps-api-docs... -recursive build",
     "build:partner-sip-aja": "pnpm --filter @arutek/apps-partner-sip-aja... -recursive build:partner-sip-aja",
     "dev:partner-sip-aja-dash": "pnpm --filter @arutek/apps-partner-sip-aja-dash... -recursive --parallel --stream dev",
     "build:partner-sip-aja-dash": "pnpm --filter @arutek/apps-partner-sip-aja-dash build"
