@@ -73,7 +73,154 @@ importers:
         specifier: ^4.3.4
         version: 4.3.4
 
+  apps/partner-arpi-dash:
+    dependencies:
+      '@arutek/package-components':
+        specifier: workspace:*
+        version: link:../../packages/components
+      '@arutek/package-fonticons':
+        specifier: workspace:*
+        version: link:../../packages/fonticons
+      '@arutek/package-helpers':
+        specifier: workspace:*
+        version: link:../../packages/helpers
+      '@arutek/package-images':
+        specifier: workspace:*
+        version: link:../../packages/images
+      '@arutek/package-libraries':
+        specifier: workspace:*
+        version: link:../../packages/libraries
+      '@arutek/package-styles':
+        specifier: workspace:*
+        version: link:../../packages/styles
+      dotenv:
+        specifier: ^16.0.3
+        version: 16.0.3
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: ^6.11.1
+        version: 6.11.1(react-dom@18.2.0)(react@18.2.0)
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.5
+        version: 18.2.5
+      '@types/react-dom':
+        specifier: ^18.2.3
+        version: 18.2.3
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.3.0
+        version: 3.3.0(vite@4.3.4)
+      typescript:
+        specifier: ^4.9.5
+        version: 4.9.5
+      vite:
+        specifier: ^4.3.4
+        version: 4.3.4
+
+  apps/partner-arpi-portal:
+    dependencies:
+      '@arutek/package-components':
+        specifier: workspace:*
+        version: link:../../packages/components
+      '@arutek/package-fonticons':
+        specifier: workspace:*
+        version: link:../../packages/fonticons
+      '@arutek/package-helpers':
+        specifier: workspace:*
+        version: link:../../packages/helpers
+      '@arutek/package-images':
+        specifier: workspace:*
+        version: link:../../packages/images
+      '@arutek/package-libraries':
+        specifier: workspace:*
+        version: link:../../packages/libraries
+      '@arutek/package-styles':
+        specifier: workspace:*
+        version: link:../../packages/styles
+      dotenv:
+        specifier: ^16.0.3
+        version: 16.0.3
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: ^6.11.1
+        version: 6.11.1(react-dom@18.2.0)(react@18.2.0)
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.5
+        version: 18.2.5
+      '@types/react-dom':
+        specifier: ^18.2.3
+        version: 18.2.3
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.3.0
+        version: 3.3.0(vite@4.3.4)
+      typescript:
+        specifier: ^4.9.5
+        version: 4.9.5
+      vite:
+        specifier: ^4.3.4
+        version: 4.3.4
+
   apps/partner-sip-aja-dash:
+    dependencies:
+      '@arutek/package-components':
+        specifier: workspace:*
+        version: link:../../packages/components
+      '@arutek/package-fonticons':
+        specifier: workspace:*
+        version: link:../../packages/fonticons
+      '@arutek/package-helpers':
+        specifier: workspace:*
+        version: link:../../packages/helpers
+      '@arutek/package-images':
+        specifier: workspace:*
+        version: link:../../packages/images
+      '@arutek/package-libraries':
+        specifier: workspace:*
+        version: link:../../packages/libraries
+      '@arutek/package-styles':
+        specifier: workspace:*
+        version: link:../../packages/styles
+      dotenv:
+        specifier: ^16.0.3
+        version: 16.0.3
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: ^6.11.1
+        version: 6.11.1(react-dom@18.2.0)(react@18.2.0)
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.5
+        version: 18.2.5
+      '@types/react-dom':
+        specifier: ^18.2.3
+        version: 18.2.3
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.3.0
+        version: 3.3.0(vite@4.3.4)
+      typescript:
+        specifier: ^4.9.5
+        version: 4.9.5
+      vite:
+        specifier: ^4.3.4
+        version: 4.3.4
+
+  apps/partner-tonikawa-portal:
     dependencies:
       '@arutek/package-components':
         specifier: workspace:*
