@@ -4,6 +4,7 @@ import helpCookie from '@arutek/package-helpers/src/cookie'
 interface routerDataType {
   path: string,
   name: string,
+  parameters?: object,
   child?: routerDataType[],
   accessLevel?: number,
 }
@@ -12,9 +13,17 @@ interface propsType {
   routerList: routerDataType[]
 }
 
+const toRoute = (routerData: routerDataType) => {
+  if (routerData.parameters) {
+    const param = new URLSearchParams(routerData.parameters as string[][])
+    return routerData.path + '?' + param
+  }
+  return routerData.path
+}
+
 const MenuHeader = ({routerList}:propsType) => {
   return (
-    <header className="bg-white">
+    <header className="relative bg-white z-10">
       <section className="typ-header-regular-normal max-w-7xl mx-auto p-20">
         <nav className="flex gap-24">
           {routerList.map((item, key) => { return ((!item.accessLevel || (item.accessLevel) >= parseInt(helpCookie.getCookie('roleId'))) &&
@@ -25,13 +34,13 @@ const MenuHeader = ({routerList}:propsType) => {
                   <div className="absolute hidden group-hover:block py-20">
                     <div className={`bg-white flex flex-col gap-16 rounded shadow p-8`}>
                       {item.child.map((item2, key2) => (
-                        <Link className="nav-link" key={key2} to={item2.path}>{item2.name}</Link>
+                        <Link className="nav-link" key={key2} to={toRoute(item2)}>{item2.name}</Link>
                       ))}
                     </div>
                   </div>
                 </div>
               ) : (
-                <Link className="nav-link" to={item.path}>{item.name}</Link>
+                <Link className="nav-link" to={toRoute(item)}>{item.name}</Link>
               )}
             </div>
           )})}

@@ -16,8 +16,5 @@
     "noEmit": false,
     "jsx": "react-jsx",
     "composite": true
-  },
-  "references": [
-    {"path": "./apps/bucket-explorer"}
-  ]
+  }
 }
