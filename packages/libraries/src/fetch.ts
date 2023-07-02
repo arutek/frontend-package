@@ -10,7 +10,7 @@ export default {
     }
     const res = await fetch(url, {
       method: 'GET',
-      headers: headers,
+      headers: Object.assign(headers, {'content-type': 'application/json'}),
     })
     if (res.status !== 200) {
       throw await res.json()
@@ -24,7 +24,7 @@ export default {
     }
     const res = await fetch(url, {
       method: 'POST',
-      headers:  headers,
+      headers:  Object.assign(headers, {'content-type': 'application/json'}),
       body: JSON.stringify(payload),
     })
     if (res.status !== 200) {
@@ -39,7 +39,7 @@ export default {
     }
     const res = await fetch(url, {
       method: 'PUT',
-      headers: headers,
+      headers: Object.assign(headers, {'content-type': 'application/json'}),
       body: JSON.stringify(payload),
     })
     if (res.status !== 200) {
@@ -54,7 +54,7 @@ export default {
     }
     const res = await fetch(url, {
       method: 'DELETE',
-      headers: headers,
+      headers: Object.assign(headers, {'content-type': 'application/json'}),
     })
     if (res.status !== 200) {
       throw await res.json()
@@ -68,7 +68,7 @@ export default {
     }
     const res = await fetch(url, {
       method: 'GET',
-      headers: headers,
+      headers: Object.assign(headers, {'content-type': 'application/json'}),
     })
     if (res.status !== 200) {
       throw await res.json()
@@ -96,7 +96,7 @@ export default {
     }
     const res = await fetch(url, {
       method: 'POST',
-      headers: headers,
+      headers: Object.assign(headers, {'content-type': 'application/json'}),
       body: formData,
     })
     if (res.status !== 200) {
