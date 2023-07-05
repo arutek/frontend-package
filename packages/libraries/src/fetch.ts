@@ -96,7 +96,7 @@ export default {
     }
     const res = await fetch(url, {
       method: 'POST',
-      headers: Object.assign(headers, {'content-type': 'application/json'}),
+      headers: headers,
       body: formData,
     })
     if (res.status !== 200) {
