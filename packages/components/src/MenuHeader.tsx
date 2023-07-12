@@ -25,8 +25,13 @@ const toRoute = (routerData: routerDataType) => {
 }
 
 const roleId = () => {
-  const userData = JSON.parse(helpCookie.getCookie('userData')) as userDataType
-  return userData.roleId
+  let userData: userDataType
+  try {
+    userData = JSON.parse(helpCookie.getCookie('userData'))
+    return userData.roleId
+  } catch {
+    return 99
+  }
 }
 
 const MenuHeader = ({routerList}:propsType) => {
