@@ -1,4 +1,4 @@
-import { formatISO, parseISO } from 'date-fns'
+import { formatISO, parseISO, intervalToDuration } from 'date-fns'
 import { zonedTimeToUtc, format } from 'date-fns-tz'
 import { id, enUS } from 'date-fns/locale'
 
@@ -32,4 +32,7 @@ export default {
     const date = zonedTimeToUtc(jsDate, tz || 'UTC')
     return formatISO(date)
   },
+  intervalToDuration (interval:Interval) {
+    return intervalToDuration(interval)
+  }
 }
