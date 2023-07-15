@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "All core component for Arutek",
   "scripts": {
+    "test": "echo tested",
     "dev:api-docs": "pnpm --filter @arutek/apps-api-docs... -recursive --stream dev",
     "dev:bucket-explorer": "pnpm --filter @arutek/apps-bucket-explorer... -recursive --parallel --stream dev",
     "dev:partner-times-dash": "pnpm --filter @arutek/apps-partner-times-dash... -recursive --stream dev",

