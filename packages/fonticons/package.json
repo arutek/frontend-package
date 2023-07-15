@@ -1,6 +1,5 @@
 {
-  "name": "@arutek/package-fonticons",
-  "private": true,
+  "name": "@arutek/fonticons",
   "version": "0.0.1",
   "description": "All fonticon for Arutek application went here",
   "type": "module",

@@ -1,6 +1,5 @@
 {
-  "name": "@arutek/package-libraries",
-  "private": true,
+  "name": "@arutek/libraries",
   "version": "0.0.1",
   "description": "All libraries used in Arutek application went here",
   "contributors": [
@@ -14,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@arutek/package-helpers": "workspace:*",
+    "@arutek/helpers": "workspace:*",
     "date-fns": "^2.30.0",
     "date-fns-tz": "^2.0.0",
     "dotenv": "^16.0.3",

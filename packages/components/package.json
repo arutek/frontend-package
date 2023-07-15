@@ -1,6 +1,5 @@
 {
-  "name": "@arutek/package-components",
-  "private": true,
+  "name": "@arutek/components",
   "version": "0.0.1",
   "description": "All UI component for Arutek application went here",
   "contributors": [
@@ -14,8 +13,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@arutek/package-stores": "workspace:*",
-    "@arutek/package-helpers": "workspace:*",
+    "@arutek/stores": "workspace:*",
+    "@arutek/helpers": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.1"

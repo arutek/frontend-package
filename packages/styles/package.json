@@ -1,6 +1,5 @@
 {
-  "name": "@arutek/package-styles",
-  "private": true,
+  "name": "@arutek/styles",
   "version": "0.0.1",
   "description": "All styling for Arutek application went here",
   "main": "./index.scss",

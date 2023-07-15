@@ -1,6 +1,5 @@
 {
-  "name": "@arutek/package-stores",
-  "private": true,
+  "name": "@arutek/stores",
   "version": "0.0.1",
   "description": "State management for Arutek application went here",
   "contributors": [

@@ -1,4 +1,4 @@
-import helpCookie from '@arutek/package-helpers/src/cookie'
+import helpCookie from '@arutek/helpers/src/cookie'
 
 let headers = {}
 

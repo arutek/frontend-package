@@ -1,4 +1,4 @@
-import notification$ from '@arutek/package-stores/arutek/notification'
+import notification$ from '@arutek/stores/arutek/notification'
 
 let intervalId:number
 

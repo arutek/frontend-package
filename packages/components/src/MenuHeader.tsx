@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import helpCookie from '@arutek/package-helpers/src/cookie'
+import helpCookie from '@arutek/helpers/src/cookie'
 
 interface routerDataType {
   path: string,

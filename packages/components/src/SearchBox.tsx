@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import notification from '@arutek/package-helpers/src/notification'
+import notification from '@arutek/helpers/src/notification'
 
 function SearchBox() {
   const [cari, setCari] = useState('')

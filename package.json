@@ -1,6 +1,5 @@
 {
   "name": "arutek-core-app",
-  "private": true,
   "version": "0.0.1",
   "description": "All core component for Arutek",
   "scripts": {

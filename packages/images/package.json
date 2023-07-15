@@ -1,6 +1,5 @@
 {
-  "name": "@arutek/package-images",
-  "private": true,
+  "name": "@arutek/images",
   "version": "0.0.1",
   "description": "Image assets for all Arutek application went here",
   "contributors": [

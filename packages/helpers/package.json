@@ -1,6 +1,5 @@
 {
-  "name": "@arutek/package-helpers",
-  "private": true,
+  "name": "@arutek/helpers",
   "version": "0.0.1",
   "description": "Helper for Arutek application went here",
   "contributors": [
@@ -15,7 +14,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@arutek/package-stores": "workspace:*"
+    "@arutek/stores": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^4.9.5"

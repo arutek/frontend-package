@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import notification$ from '@arutek/package-stores/arutek/notification'
+import notification$ from '@arutek/stores/arutek/notification'
 
 const classDefiner = (val:string) => {
   const basicClass = 'fixed bottom-16 right-16 rounded-lg'

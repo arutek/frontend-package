@@ -26,13 +26,13 @@ importers:
 
   apps/api-docs:
     dependencies:
-      '@arutek/package-components':
+      '@arutek/components':
         specifier: workspace:*
         version: link:../../packages/components
-      '@arutek/package-fonticons':
+      '@arutek/fonticons':
         specifier: workspace:*
         version: link:../../packages/fonticons
-      '@arutek/package-styles':
+      '@arutek/styles':
         specifier: workspace:*
         version: link:../../packages/styles
       dotenv:
@@ -75,22 +75,22 @@ importers:
 
   apps/partner-arpi-portal:
     dependencies:
-      '@arutek/package-components':
+      '@arutek/components':
         specifier: workspace:*
         version: link:../../packages/components
-      '@arutek/package-fonticons':
+      '@arutek/fonticons':
         specifier: workspace:*
         version: link:../../packages/fonticons
-      '@arutek/package-helpers':
+      '@arutek/helpers':
         specifier: workspace:*
         version: link:../../packages/helpers
-      '@arutek/package-images':
+      '@arutek/images':
         specifier: workspace:*
         version: link:../../packages/images
-      '@arutek/package-libraries':
+      '@arutek/libraries':
         specifier: workspace:*
         version: link:../../packages/libraries
-      '@arutek/package-styles':
+      '@arutek/styles':
         specifier: workspace:*
         version: link:../../packages/styles
       dotenv:
@@ -124,22 +124,22 @@ importers:
 
   apps/partner-lines-dash:
     dependencies:
-      '@arutek/package-components':
+      '@arutek/components':
         specifier: ^0.0.1
         version: link:../../packages/components
-      '@arutek/package-fonticons':
+      '@arutek/fonticons':
         specifier: ^0.0.1
         version: link:../../packages/fonticons
-      '@arutek/package-helpers':
+      '@arutek/helpers':
         specifier: ^0.0.1
         version: link:../../packages/helpers
-      '@arutek/package-images':
+      '@arutek/images':
         specifier: ^0.0.1
         version: link:../../packages/images
-      '@arutek/package-libraries':
+      '@arutek/libraries':
         specifier: ^0.0.1
         version: link:../../packages/libraries
-      '@arutek/package-styles':
+      '@arutek/styles':
         specifier: ^0.0.1
         version: link:../../packages/styles
       dotenv:
@@ -173,22 +173,22 @@ importers:
 
   apps/partner-times-dash:
     dependencies:
-      '@arutek/package-components':
+      '@arutek/components':
         specifier: workspace:*
         version: link:../../packages/components
-      '@arutek/package-fonticons':
+      '@arutek/fonticons':
         specifier: workspace:*
         version: link:../../packages/fonticons
-      '@arutek/package-helpers':
+      '@arutek/helpers':
         specifier: workspace:*
         version: link:../../packages/helpers
-      '@arutek/package-images':
+      '@arutek/images':
         specifier: workspace:*
         version: link:../../packages/images
-      '@arutek/package-libraries':
+      '@arutek/libraries':
         specifier: workspace:*
         version: link:../../packages/libraries
-      '@arutek/package-styles':
+      '@arutek/styles':
         specifier: workspace:*
         version: link:../../packages/styles
       dotenv:
@@ -222,22 +222,22 @@ importers:
 
   apps/partner-tonikawa-portal:
     dependencies:
-      '@arutek/package-components':
+      '@arutek/components':
         specifier: workspace:*
         version: link:../../packages/components
-      '@arutek/package-fonticons':
+      '@arutek/fonticons':
         specifier: workspace:*
         version: link:../../packages/fonticons
-      '@arutek/package-helpers':
+      '@arutek/helpers':
         specifier: workspace:*
         version: link:../../packages/helpers
-      '@arutek/package-images':
+      '@arutek/images':
         specifier: workspace:*
         version: link:../../packages/images
-      '@arutek/package-libraries':
+      '@arutek/libraries':
         specifier: workspace:*
         version: link:../../packages/libraries
-      '@arutek/package-styles':
+      '@arutek/styles':
         specifier: workspace:*
         version: link:../../packages/styles
       dotenv:
@@ -271,10 +271,10 @@ importers:
 
   packages/components:
     dependencies:
-      '@arutek/package-helpers':
+      '@arutek/helpers':
         specifier: workspace:*
         version: link:../helpers
-      '@arutek/package-stores':
+      '@arutek/stores':
         specifier: workspace:*
         version: link:../stores
       react:
@@ -305,7 +305,7 @@ importers:
 
   packages/helpers:
     dependencies:
-      '@arutek/package-stores':
+      '@arutek/stores':
         specifier: workspace:*
         version: link:../stores
     devDependencies:
@@ -317,7 +317,7 @@ importers:
 
   packages/libraries:
     dependencies:
-      '@arutek/package-helpers':
+      '@arutek/helpers':
         specifier: workspace:*
         version: link:../helpers
       date-fns:
