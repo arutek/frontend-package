@@ -1,9 +1,0 @@
-@layer components {
-  .input {
-    @apply rounded border border-foreground accent-primary py-8 px-16;
-    &-sm {
-      @extend .input;
-      @apply w-180;
-    }
-  }
-}

@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "aru-icon";
+  src: url('aru-icon.eot?t=1689555455206'); /* IE9*/
+  src: url('aru-icon.eot?t=1689555455206#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url("aru-icon.woff2?t=1689555455206") format("woff2"),
+  url("aru-icon.woff?t=1689555455206") format("woff"),
+  url('aru-icon.ttf?t=1689555455206') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('aru-icon.svg?t=1689555455206#aru-icon') format('svg'); /* iOS 4.1- */
+}
+
+[class^="aru-icon-"], [class*=" aru-icon-"] {
+  font-family: 'aru-icon' !important;
+
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.aru-icon-arrow-left:before { content: "\ea01"; }
+.aru-icon-arrow-right:before { content: "\ea02"; }
+.aru-icon-chevron-left:before { content: "\ea03"; }
+.aru-icon-chevron-right:before { content: "\ea04"; }
+.aru-icon-close:before { content: "\ea05"; }
+.aru-icon-trash:before { content: "\ea06"; }
+

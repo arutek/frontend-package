@@ -26,15 +26,9 @@ importers:
 
   apps/api-docs:
     dependencies:
-      '@arutek/components':
+      '@arutek/core-app':
         specifier: ^0.0.1
-        version: link:../../packages/components
-      '@arutek/fonticons':
-        specifier: ^0.0.1
-        version: link:../../packages/fonticons
-      '@arutek/styles':
-        specifier: ^0.0.1
-        version: link:../../packages/styles
+        version: link:../../packages/core-app
       dotenv:
         specifier: ^16.0.3
         version: 16.0.3
@@ -75,24 +69,9 @@ importers:
 
   apps/partner-arpi-portal:
     dependencies:
-      '@arutek/components':
-        specifier: ^0.0.1
-        version: link:../../packages/components
-      '@arutek/fonticons':
-        specifier: ^0.0.1
-        version: link:../../packages/fonticons
-      '@arutek/helpers':
-        specifier: ^0.0.1
-        version: link:../../packages/helpers
-      '@arutek/images':
-        specifier: ^0.0.1
-        version: link:../../packages/images
-      '@arutek/libraries':
-        specifier: ^0.0.1
-        version: link:../../packages/libraries
-      '@arutek/styles':
-        specifier: ^0.0.1
-        version: link:../../packages/styles
+      '@arutek/core-app':
+        specifier: ~0.0.1
+        version: link:../../packages/core-app
       dotenv:
         specifier: ^16.0.3
         version: 16.0.3
@@ -124,24 +103,9 @@ importers:
 
   apps/partner-lines-dash:
     dependencies:
-      '@arutek/components':
+      '@arutek/core-app':
         specifier: ~0.0.1
-        version: link:../../packages/components
-      '@arutek/fonticons':
-        specifier: ~0.0.1
-        version: link:../../packages/fonticons
-      '@arutek/helpers':
-        specifier: ~0.0.1
-        version: link:../../packages/helpers
-      '@arutek/images':
-        specifier: ~0.0.1
-        version: link:../../packages/images
-      '@arutek/libraries':
-        specifier: ~0.0.1
-        version: link:../../packages/libraries
-      '@arutek/styles':
-        specifier: ~0.0.1
-        version: link:../../packages/styles
+        version: link:../../packages/core-app
       dotenv:
         specifier: ^16.0.3
         version: 16.0.3
@@ -173,24 +137,9 @@ importers:
 
   apps/partner-times-dash:
     dependencies:
-      '@arutek/components':
-        specifier: ^0.0.1
-        version: link:../../packages/components
-      '@arutek/fonticons':
-        specifier: ^0.0.1
-        version: link:../../packages/fonticons
-      '@arutek/helpers':
-        specifier: ^0.0.1
-        version: link:../../packages/helpers
-      '@arutek/images':
-        specifier: ^0.0.1
-        version: link:../../packages/images
-      '@arutek/libraries':
-        specifier: ^0.0.1
-        version: link:../../packages/libraries
-      '@arutek/styles':
-        specifier: ^0.0.1
-        version: link:../../packages/styles
+      '@arutek/core-app':
+        specifier: ~0.0.1
+        version: link:../../packages/core-app
       dotenv:
         specifier: ^16.0.3
         version: 16.0.3
@@ -222,24 +171,9 @@ importers:
 
   apps/partner-tonikawa-portal:
     dependencies:
-      '@arutek/components':
-        specifier: ^0.0.1
-        version: link:../../packages/components
-      '@arutek/fonticons':
-        specifier: ^0.0.1
-        version: link:../../packages/fonticons
-      '@arutek/helpers':
-        specifier: ^0.0.1
-        version: link:../../packages/helpers
-      '@arutek/images':
-        specifier: ^0.0.1
-        version: link:../../packages/images
-      '@arutek/libraries':
-        specifier: ^0.0.1
-        version: link:../../packages/libraries
-      '@arutek/styles':
-        specifier: ^0.0.1
-        version: link:../../packages/styles
+      '@arutek/core-app':
+        specifier: ~0.0.1
+        version: link:../../packages/core-app
       dotenv:
         specifier: ^16.0.3
         version: 16.0.3
@@ -269,57 +203,8 @@ importers:
         specifier: ^4.3.4
         version: 4.3.4
 
-  packages/components:
+  packages/core-app:
     dependencies:
-      '@arutek/helpers':
-        specifier: workspace:*
-        version: link:../helpers
-      '@arutek/stores':
-        specifier: workspace:*
-        version: link:../stores
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-      react-router-dom:
-        specifier: ^6.11.1
-        version: 6.11.1(react-dom@18.2.0)(react@18.2.0)
-    devDependencies:
-      '@types/react':
-        specifier: ^18.2.5
-        version: 18.2.5
-      '@types/react-dom':
-        specifier: ^18.2.3
-        version: 18.2.3
-      typescript:
-        specifier: ^4.9.5
-        version: 4.9.5
-
-  packages/fonticons:
-    dependencies:
-      svgtofont:
-        specifier: ^3.24.0
-        version: 3.24.0
-
-  packages/helpers:
-    dependencies:
-      '@arutek/stores':
-        specifier: workspace:*
-        version: link:../stores
-    devDependencies:
-      typescript:
-        specifier: ^4.9.5
-        version: 4.9.5
-
-  packages/images: {}
-
-  packages/libraries:
-    dependencies:
-      '@arutek/helpers':
-        specifier: workspace:*
-        version: link:../helpers
       date-fns:
         specifier: ^2.30.0
         version: 2.30.0
@@ -338,6 +223,12 @@ importers:
       react-router-dom:
         specifier: ^6.11.1
         version: 6.11.1(react-dom@18.2.0)(react@18.2.0)
+      rxjs:
+        specifier: ^7.8.1
+        version: 7.8.1
+      svgtofont:
+        specifier: ^3.24.0
+        version: 3.24.0
     devDependencies:
       '@types/node':
         specifier: 18.15.11
@@ -348,26 +239,6 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.3
         version: 18.2.3
-      typescript:
-        specifier: ^4.9.5
-        version: 4.9.5
-
-  packages/stores:
-    dependencies:
-      rxjs:
-        specifier: ^7.8.1
-        version: 7.8.1
-    devDependencies:
-      typescript:
-        specifier: ^4.9.5
-        version: 4.9.5
-
-  packages/styles:
-    dependencies:
-      dotenv:
-        specifier: ^16.0.3
-        version: 16.0.3
-    devDependencies:
       autoprefixer:
         specifier: ^10.4.14
         version: 10.4.14(postcss@8.4.23)
@@ -383,6 +254,9 @@ importers:
       tailwindcss:
         specifier: ^3.3.2
         version: 3.3.2
+      typescript:
+        specifier: ^4.9.5
+        version: 4.9.5
 
 packages:
 
