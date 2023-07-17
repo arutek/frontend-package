@@ -27,13 +27,13 @@ importers:
   apps/api-docs:
     dependencies:
       '@arutek/components':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/components
       '@arutek/fonticons':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/fonticons
       '@arutek/styles':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/styles
       dotenv:
         specifier: ^16.0.3
@@ -76,22 +76,22 @@ importers:
   apps/partner-arpi-portal:
     dependencies:
       '@arutek/components':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/components
       '@arutek/fonticons':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/fonticons
       '@arutek/helpers':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/helpers
       '@arutek/images':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/images
       '@arutek/libraries':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/libraries
       '@arutek/styles':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/styles
       dotenv:
         specifier: ^16.0.3
@@ -125,22 +125,22 @@ importers:
   apps/partner-lines-dash:
     dependencies:
       '@arutek/components':
-        specifier: ^0.0.1
+        specifier: ~0.0.1
         version: link:../../packages/components
       '@arutek/fonticons':
-        specifier: ^0.0.1
+        specifier: ~0.0.1
         version: link:../../packages/fonticons
       '@arutek/helpers':
-        specifier: ^0.0.1
+        specifier: ~0.0.1
         version: link:../../packages/helpers
       '@arutek/images':
-        specifier: ^0.0.1
+        specifier: ~0.0.1
         version: link:../../packages/images
       '@arutek/libraries':
-        specifier: ^0.0.1
+        specifier: ~0.0.1
         version: link:../../packages/libraries
       '@arutek/styles':
-        specifier: ^0.0.1
+        specifier: ~0.0.1
         version: link:../../packages/styles
       dotenv:
         specifier: ^16.0.3
@@ -174,22 +174,22 @@ importers:
   apps/partner-times-dash:
     dependencies:
       '@arutek/components':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/components
       '@arutek/fonticons':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/fonticons
       '@arutek/helpers':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/helpers
       '@arutek/images':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/images
       '@arutek/libraries':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/libraries
       '@arutek/styles':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/styles
       dotenv:
         specifier: ^16.0.3
@@ -223,22 +223,22 @@ importers:
   apps/partner-tonikawa-portal:
     dependencies:
       '@arutek/components':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/components
       '@arutek/fonticons':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/fonticons
       '@arutek/helpers':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/helpers
       '@arutek/images':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/images
       '@arutek/libraries':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/libraries
       '@arutek/styles':
-        specifier: workspace:*
+        specifier: ^0.0.1
         version: link:../../packages/styles
       dotenv:
         specifier: ^16.0.3
@@ -329,6 +329,12 @@ importers:
       dotenv:
         specifier: ^16.0.3
         version: 16.0.3
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
       react-router-dom:
         specifier: ^6.11.1
         version: 6.11.1(react-dom@18.2.0)(react@18.2.0)
@@ -336,6 +342,12 @@ importers:
       '@types/node':
         specifier: 18.15.11
         version: 18.15.11
+      '@types/react':
+        specifier: ^18.2.5
+        version: 18.2.5
+      '@types/react-dom':
+        specifier: ^18.2.3
+        version: 18.2.3
       typescript:
         specifier: ^4.9.5
         version: 4.9.5
