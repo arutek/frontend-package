@@ -1,8 +1,10 @@
 name: "CI/CD"
 on:
   push:
-    branches:
-      - master
+    tags:
+      - "v**"
+    paths:
+      - "**/package.json"
 jobs:
   publish:
     runs-on: ubuntu-22.04
