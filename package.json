@@ -7,10 +7,12 @@
     "dev:api-docs": "pnpm --filter @arutek/apps-api-docs... -recursive --stream dev",
     "dev:bucket-explorer": "pnpm --filter @arutek/apps-bucket-explorer... -recursive --parallel --stream dev",
     "dev:partner-times-dash": "pnpm --filter @arutek/apps-partner-times-dash... -recursive --stream dev",
+    "dev:partner-project-alpha": "pnpm --filter @arutek/apps-partner-project-alpha... -recursive --stream dev",
     "dev:partner-lines-dash": "pnpm --filter @arutek/apps-partner-lines-dash... -recursive --parallel --stream dev",
     "dev:partner-tonikawa-portal": "pnpm --filter @arutek/apps-partner-tonikawa-portal... -recursive --stream dev",
     "build:api-docs": "pnpm --filter @arutek/apps-api-docs... -recursive build",
     "build:partner-times-dash": "pnpm --filter @arutek/apps-partner-times-dash... -recursive --parallel build",
+    "build:partner-project-alpha": "pnpm --filter @arutek/apps-partner-project-alpha... -recursive --parallel build",
     "build:partner-lines-dash": "pnpm --filter @arutek/apps-partner-lines-dash --parallel build",
     "build:partner-tonikawa-portal": "pnpm --filter @arutek/apps-partner-tonikawa-portal... -recursive --parallel build"
   },
