@@ -1,4 +1,4 @@
-import { formatISO, parseISO, intervalToDuration } from 'date-fns'
+import { formatISO, parseISO, intervalToDuration, getUnixTime } from 'date-fns'
 import { zonedTimeToUtc, format } from 'date-fns-tz'
 import { id, enUS } from 'date-fns/locale'
 
@@ -20,6 +20,7 @@ export default {
    * @returns Date formatted with locale, i.e, `06 May 2023`
    */
   isoToDate1 (isoDatetime:string, locale?:string):string {
+    if (getUnixTime(parseISO(isoDatetime)) < 0) return '-'
     return format(parseISO(isoDatetime), 'dd MMMM yyyy', {locale: getLocale(locale || 'enUS')})
   },
   /**
