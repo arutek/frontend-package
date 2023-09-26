@@ -10,7 +10,10 @@ export default {
     }
     const res = await fetch(url, {
       method: 'GET',
-      headers: Object.assign(headers, {'content-type': 'application/json'}),
+      headers: Object.assign(headers, {
+        'content-type': 'application/json',
+        'ngrok-skip-browser-warning': '*',
+      }),
     })
     if (res.status !== 200) {
       throw await res.json()
@@ -24,7 +27,10 @@ export default {
     }
     const res = await fetch(url, {
       method: 'POST',
-      headers:  Object.assign(headers, {'content-type': 'application/json'}),
+      headers:  Object.assign(headers, {
+        'content-type': 'application/json',
+        'ngrok-skip-browser-warning': '*',
+      }),
       body: JSON.stringify(payload),
     })
     if (res.status !== 200) {
@@ -39,7 +45,10 @@ export default {
     }
     const res = await fetch(url, {
       method: 'PUT',
-      headers: Object.assign(headers, {'content-type': 'application/json'}),
+      headers: Object.assign(headers, {
+        'content-type': 'application/json',
+        'ngrok-skip-browser-warning': '*',
+      }),
       body: JSON.stringify(payload),
     })
     if (res.status !== 200) {
@@ -54,7 +63,10 @@ export default {
     }
     const res = await fetch(url, {
       method: 'DELETE',
-      headers: Object.assign(headers, {'content-type': 'application/json'}),
+      headers: Object.assign(headers, {
+        'content-type': 'application/json',
+        'ngrok-skip-browser-warning': '*',
+      }),
     })
     if (res.status !== 200) {
       throw await res.json()
@@ -68,7 +80,10 @@ export default {
     }
     const res = await fetch(url, {
       method: 'GET',
-      headers: Object.assign(headers, {'content-type': 'application/json'}),
+      headers: Object.assign(headers, {
+        'content-type': 'application/json',
+        'ngrok-skip-browser-warning': '*',
+      }),
     })
     if (res.status !== 200) {
       throw await res.json()
