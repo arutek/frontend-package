@@ -29,7 +29,7 @@ export default {
    * @returns Date formatted with locale, i.e, `2023-09-29`
    */
   isoToHtmlDate (isoDatetime:string, locale?:string):string {
-    if (getUnixTime(parseISO(isoDatetime)) <= 1 || !isoDatetime) return '1970-01-01'
+    if (getUnixTime(parseISO(isoDatetime)) <= 1 || !isoDatetime) return '1970-01-02'
     return format(parseISO(isoDatetime), 'yyyy-MM-dd', {locale: getLocale(locale || 'enUS')})
   },
   /**
