@@ -6,6 +6,14 @@ export default {
       currency: 'IDR',
     }).format(val)
   },
+  currencyNoDecimal (val:number) {
+    if (typeof val !== 'number') val = 0
+    return new Intl.NumberFormat('id-ID', {
+      style: 'currency',
+      currency: 'IDR',
+      maximumFractionDigits: 0,
+    }).format(val)
+  },
   shortCurrency (val:number, symbol = 'Rp') {
     const suffixes = ["", "Rb", "Jt", "Mil", "Tri"]
     const plusMin = val < 0 ? '-' : ''
