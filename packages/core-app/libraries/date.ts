@@ -65,9 +65,8 @@ export default {
    * @param jsDate JS date, built with `new Date()`
    * @returns ISO8601 with timezone, i.e, `2023-05-06T015:33 UTC+07:00`
    */
-  jsDateToIso (jsDate:Date, tz?:string):string {
-    const date = zonedTimeToUtc(jsDate, tz || 'UTC')
-    return formatISO(date)
+  jsDateToIso (jsDate:Date):string {
+    return formatISO(jsDate)
   },
   intervalToDuration (interval:Interval) {
     return intervalToDuration(interval)
