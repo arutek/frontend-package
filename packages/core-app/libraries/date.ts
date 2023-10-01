@@ -61,6 +61,14 @@ export default {
     return format(jsDate, 'yyyy-MM', {locale: getLocale(locale || 'enUS')})
   },
   /**
+   * Return a `yyyy-MM-dd` date-fns formatted date
+   * @param jsDate JS date, built with `new Date()`
+   * @returns HTML Month formatted with locale, i.e, `2023-09-29`
+   */
+  jsDateToHtmlDate (jsDate:Date, locale?:string):string {
+    return format(jsDate, 'yyyy-MM-dd', {locale: getLocale(locale || 'enUS')})
+  },
+  /**
    * Return a ISO8601 formatted date
    * @param jsDate JS date, built with `new Date()`
    * @returns ISO8601 with timezone, i.e, `2023-05-06T015:33 UTC+07:00`
@@ -71,4 +79,14 @@ export default {
   intervalToDuration (interval:Interval) {
     return intervalToDuration(interval)
   },
+  /**
+   * Return a JS formatted date
+   * @param days number of added day(s)
+   * @returns JS formatted date
+   */
+  jsDateAddDays (days:number) {
+    const date = new Date()
+    date.setDate(date.getDate() + days)
+    return date
+  }
 }
