@@ -104,6 +104,38 @@ export default {
     a.click()
     return
   },
+  async dlPostData (url:string, filename = 'file', payload:object, query = {}) {
+    if (query) {
+      const queryParam = new URLSearchParams(query)
+      url += `?${queryParam.toString()}`
+    }
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: Object.assign(headers, {
+        'content-type': 'application/json',
+        'ngrok-skip-browser-warning': '*',
+      }),
+      body: JSON.stringify(payload),
+    })
+    if (res.status !== 200) {
+      throw await res.json()
+    }
+    const blob =  await res.blob()
+    const blobUrl = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    const contentDisposition = res.headers.get('Content-Disposition')
+    console.log('hasil: ', contentDisposition)
+    if (contentDisposition) {
+      const filenameMatch = contentDisposition.match(/filename=(.+)$/)
+      console.log(filenameMatch)
+      if (filenameMatch && filenameMatch.length > 1) filename = filenameMatch[1]
+    }
+    a.href = blobUrl
+    a.download = filename
+    a.style.display = 'none'
+    a.click()
+    return
+  },
   async upData (url:string, formData:FormData, query = {}) {
     if (query) {
       const queryParam = new URLSearchParams(query)
