@@ -17,6 +17,7 @@ export default {
   /**
    * Return a `dd MMMM yyyy` date-fns formatted date
    * @param isoDatetime HTML formatted date, i.e, `2023-05-06T015:33 UTC+07:00`
+   * @param locale string that represent locale, i.e, `enUS` for English (US)
    * @returns Date formatted with locale, i.e, `06 May 2023`
    */
   isoToDate1 (isoDatetime:string, locale?:string):string {
@@ -26,6 +27,7 @@ export default {
   /**
    * Return a `yyyy-MM-dd` date-fns formatted date
    * @param isoDatetime HTML formatted date, i.e, `2023-05-06T015:33 UTC+07:00`
+   * @param locale string that represent locale, i.e, `enUS` for English (US)
    * @returns Date formatted with locale, i.e, `2023-09-29`
    */
   isoToHtmlDate (isoDatetime:string, locale?:string):string {
@@ -34,13 +36,25 @@ export default {
   },
   /**
    * Return a ISO8601 formatted date
-   * @param jsDate HTML formatted date, i.e, `2023-05-06`
+   * @param htmlDate HTML formatted date, i.e, `2023-05-06`
    * @param tz timezone, i.e, `Asia/Jakarta`
    * @returns ISO8601 with timezone, i.e, `2023-05-06T015:33 UTC+07:00`
    */
-  htmlDateToIso (jsDate:string, tz?:string):string {
-    const date = zonedTimeToUtc(jsDate, tz || 'UTC')
+  htmlDateToIso (htmlDate:string, tz?:string):string {
+    const date = zonedTimeToUtc(htmlDate, tz || 'UTC')
     return formatISO(date)
+  },
+  /**
+   * Return a ISO8601 formatted date
+   * @param htmlDate HTML formatted date, i.e, `2023-05-06`
+   * @param locale string that represent locale, i.e, `enUS` for English (US)
+   * @param tz timezone, i.e, `Asia/Jakarta`
+   * @returns Date formatted with locale, i.e, `06 May 2023`
+   */
+  htmlDateToDate1 (htmlDate:string, locale?:string, tz?:string):string {
+    if (!htmlDate || htmlDate === '') return '-'
+    const date = zonedTimeToUtc(htmlDate, tz || 'UTC')
+    return format(date, 'dd MMMM yyyy', {locale: getLocale(locale || 'enUS')})
   },
   /**
    * Return a ISO8601 formatted date
