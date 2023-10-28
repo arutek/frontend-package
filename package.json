@@ -1,6 +1,6 @@
 {
   "name": "arutek-core-app",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "All core component for Arutek",
   "scripts": {
     "test": "echo tested",
@@ -9,10 +9,12 @@
     "dev:partner-times-dash": "pnpm --filter @arutek/apps-partner-times-dash... -recursive --stream dev",
     "dev:partner-lines-dash": "pnpm --filter @arutek/apps-partner-lines-dash... -recursive --parallel --stream dev",
     "dev:partner-tonikawa-portal": "pnpm --filter @arutek/apps-partner-tonikawa-portal... -recursive --stream dev",
+    "dev:partner-iwkbu-conversion": "pnpm --filter @arutek/apps-partner-iwkbu-conversion... -recursive --stream dev",
     "build:api-docs": "pnpm --filter @arutek/apps-api-docs... -recursive build",
     "build:partner-times-dash": "pnpm --filter @arutek/apps-partner-times-dash... -recursive --parallel build",
     "build:partner-lines-dash": "pnpm --filter @arutek/apps-partner-lines-dash --parallel build",
-    "build:partner-tonikawa-portal": "pnpm --filter @arutek/apps-partner-tonikawa-portal... -recursive --parallel build"
+    "build:partner-tonikawa-portal": "pnpm --filter @arutek/apps-partner-tonikawa-portal... -recursive --parallel build",
+    "build:partner-iwkbu-conversion": "pnpm --filter @arutek/apps-partner-iwkbu-conversion... -recursive --parallel build"
   },
   "keywords": [],
   "contributors": [

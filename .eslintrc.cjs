@@ -27,6 +27,7 @@ module.exports = {
     "@typescript-eslint/no-var-requires": "off",
     "no-useless-escape": ["off"],
     "no-unexpected-multiline": "warn",
+    "no-self-assign": "warn",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/ban-ts-comment": "off"
   }

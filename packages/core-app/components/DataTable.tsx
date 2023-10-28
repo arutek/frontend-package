@@ -7,7 +7,7 @@ interface propsType {
   next?: MouseEventHandler<HTMLParagraphElement>,
   prev?: MouseEventHandler<HTMLParagraphElement>,
   size?: ChangeEventHandler<HTMLSelectElement>,
-  filter?: filterQueryType,
+  filter?: FilterQueryType,
 }
 
 const DataTable = (props:propsType) => {
