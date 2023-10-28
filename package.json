@@ -1,6 +1,6 @@
 {
   "name": "arutek-core-app",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "All core component for Arutek",
   "scripts": {
     "test": "echo tested",
