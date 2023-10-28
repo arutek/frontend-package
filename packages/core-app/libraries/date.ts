@@ -31,8 +31,12 @@ export default {
    * @returns Date formatted with locale, i.e, `2023-09-29`
    */
   isoToHtmlDate (isoDatetime:string, locale?:string):string {
-    if (getUnixTime(parseISO(isoDatetime)) <= 1 || !isoDatetime) return ''
-    return format(parseISO(isoDatetime), 'yyyy-MM-dd', {locale: getLocale(locale || 'enUS')})
+    try {
+      if (getUnixTime(parseISO(isoDatetime)) <= 1 || !isoDatetime) return ''
+      return format(parseISO(isoDatetime), 'yyyy-MM-dd', {locale: getLocale(locale || 'enUS')})
+    } catch {
+      return "1970-01-01"
+    }
   },
   /**
    * Return a ISO8601 formatted date
@@ -53,8 +57,12 @@ export default {
    */
   htmlDateToDate1 (htmlDate:string, locale?:string, tz?:string):string {
     if (!htmlDate || htmlDate === '') return '-'
-    const date = zonedTimeToUtc(htmlDate, tz || 'UTC')
-    return format(date, 'dd MMMM yyyy', {locale: getLocale(locale || 'enUS')})
+    try {
+      const date = zonedTimeToUtc(htmlDate, tz || 'UTC')
+      return format(date, 'dd MMMM yyyy', {locale: getLocale(locale || 'enUS')})
+    } catch {
+      return '-'
+    }
   },
   /**
    * Return a ISO8601 formatted date
