@@ -1,5 +1,5 @@
 import { redirect } from 'react-router-dom'
-import helpCookie from '../helpers/cookie'
+import helpCookie from '@arutek/core-app/helpers/cookie'
 
 interface userDataType {
   roleId: number,

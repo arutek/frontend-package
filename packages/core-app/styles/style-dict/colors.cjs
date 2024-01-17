@@ -79,5 +79,5 @@ module.exports = {
     '30': '#ADBED6',
     '20': '#CFD9E7',
     '10': '#F1F4F8',
-  }
+  },
 }

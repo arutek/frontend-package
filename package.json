@@ -10,11 +10,15 @@
     "dev:partner-lines-dash": "pnpm --filter @arutek/apps-partner-lines-dash... -recursive --parallel --stream dev",
     "dev:partner-tonikawa-portal": "pnpm --filter @arutek/apps-partner-tonikawa-portal... -recursive --stream dev",
     "dev:partner-iwkbu-conversion": "pnpm --filter @arutek/apps-partner-iwkbu-conversion... -recursive --stream dev",
+    "dev:partner-iwkbu-masa-laku": "pnpm --filter @arutek/apps-partner-iwkbu-masa-laku... -recursive --stream dev",
+    "dev:arutek-main-dashboard": "pnpm --filter @arutek/apps-arutek-main-dashboard... -recursive --stream dev",
     "build:api-docs": "pnpm --filter @arutek/apps-api-docs... -recursive build",
     "build:partner-times-dash": "pnpm --filter @arutek/apps-partner-times-dash... -recursive --parallel build",
     "build:partner-lines-dash": "pnpm --filter @arutek/apps-partner-lines-dash --parallel build",
     "build:partner-tonikawa-portal": "pnpm --filter @arutek/apps-partner-tonikawa-portal... -recursive --parallel build",
-    "build:partner-iwkbu-conversion": "pnpm --filter @arutek/apps-partner-iwkbu-conversion... -recursive --parallel build"
+    "build:partner-iwkbu-conversion": "pnpm --filter @arutek/apps-partner-iwkbu-conversion... -recursive --parallel build",
+    "build:partner-iwkbu-masa-laku": "pnpm --filter @arutek/apps-partner-iwkbu-masa-laku... -recursive --parallel build",
+    "build:arutek-main-dashboard": "pnpm --filter @arutek/apps-arutek-main-dashboard... -recursive --parallel build"
   },
   "keywords": [],
   "contributors": [

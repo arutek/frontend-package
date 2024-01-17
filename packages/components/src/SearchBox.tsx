@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import notification from '../helpers/notification'
+import notification from '../../core-app/helpers/notification'
 
 function SearchBox() {
   const [cari, setCari] = useState('')

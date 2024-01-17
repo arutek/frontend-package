@@ -2,9 +2,22 @@ require('dotenv').config()
 const styleName = process.env.VITE_STYLE || process.env.STYLE || 'default'
 const colors = require(`./tailwind/${styleName}/colors.cjs`)
 const spacing = require(`./tailwind/${styleName}/spacing.cjs`)
+const fontSize = require(`./tailwind/${styleName}/fontSize.cjs`)
 const letterSpacing = require(`./tailwind/${styleName}/letterSpacing.cjs`)
 const minWidth = require(`./tailwind/${styleName}/minWidth.cjs`)
 const maxWidth = require(`./tailwind/${styleName}/maxWidth.cjs`)
+
+
+const defaultFonts = ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji']
+let selectedFont
+switch (styleName) {
+case 'default2024':
+  selectedFont = 'Inter'
+  break
+default:
+  selectedFont = 'Plus Jakarta Sans'
+  break
+}
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -20,15 +33,16 @@ module.exports = {
     }
   ],
   theme: {
-    colors,
-    spacing,
-    letterSpacing,
+    colors: colors || {},
     extend: {
       fontFamily: {
-        'sans': ['Plus Jakarta Sans', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji']
+        'sans': [selectedFont, ...defaultFonts],
       },
-      maxWidth,
-      minWidth,
+      maxWidth: maxWidth || {},
+      minWidth: minWidth || {},
+      spacing: spacing || {},
+      letterSpacing: letterSpacing || {},
+      fontSize: fontSize || {},
     },
   },
   plugins: [],
